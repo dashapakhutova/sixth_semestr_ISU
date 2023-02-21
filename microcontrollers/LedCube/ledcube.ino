@@ -4,7 +4,7 @@
 #define led_pin4 4
 #define led_pin5 5
 #define led_pin6 6
-
+int led_on;
 void setup() {
   Serial.begin(9600);
   pinMode(led_pin1, OUTPUT);
@@ -16,7 +16,64 @@ void setup() {
 }
 
 void loop() {
-  int led_on = Serial.parseInt();
+  if (led_on == 13) {
+    digitalWrite(led_pin1, 0);
+    digitalWrite(led_pin2, 0);
+    digitalWrite(led_pin3, 0);
+    digitalWrite(led_pin4, 0);
+    digitalWrite(led_pin5, 0);
+    digitalWrite(led_pin6, 0);
+    digitalWrite(led_pin1, 1);
+    digitalWrite(led_pin6, 1);
+    delay(5);
+    digitalWrite(led_pin3, 1);
+    digitalWrite(led_pin6, 1);
+    delay(5);
+  }
+  if (led_on == 24) {
+    digitalWrite(led_pin1, 0);
+    digitalWrite(led_pin2, 0);
+    digitalWrite(led_pin3, 0);
+    digitalWrite(led_pin4, 0);
+    digitalWrite(led_pin5, 0);
+    digitalWrite(led_pin6, 0);
+    digitalWrite(led_pin2, 1);
+    digitalWrite(led_pin6, 1);
+    delay(5);
+    digitalWrite(led_pin4, 1);
+    digitalWrite(led_pin6, 1);
+    delay(5);
+  }
+  if (led_on == 57) {
+    digitalWrite(led_pin1, 0);
+    digitalWrite(led_pin2, 0);
+    digitalWrite(led_pin3, 0);
+    digitalWrite(led_pin4, 0);
+    digitalWrite(led_pin5, 0);
+    digitalWrite(led_pin6, 0);
+    digitalWrite(led_pin1, 1);
+    digitalWrite(led_pin5, 1);
+    delay(5);
+    digitalWrite(led_pin3, 1);
+    digitalWrite(led_pin5, 1);
+    delay(5);
+  }
+  if (led_on == 68) {
+    digitalWrite(led_pin1, 0);
+    digitalWrite(led_pin2, 0);
+    digitalWrite(led_pin3, 0);
+    digitalWrite(led_pin4, 0);
+    digitalWrite(led_pin5, 0);
+    digitalWrite(led_pin6, 0);
+    digitalWrite(led_pin2, 1);
+    digitalWrite(led_pin5, 1);
+    delay(5);
+    digitalWrite(led_pin4, 1);
+    digitalWrite(led_pin5, 1);
+    delay(5);
+
+  }
+  led_on = Serial.parseInt();
   if (led_on == 1) {
     digitalWrite(led_pin1, 1);
     digitalWrite(led_pin6, 1);
@@ -213,7 +270,7 @@ void loop() {
     digitalWrite(led_pin4, 0);
     digitalWrite(led_pin5, 0);
   }
-  else if (led_on == 12345678) {
+  else if (led_on == 18) {
     digitalWrite(led_pin1, 1);
     digitalWrite(led_pin2, 1);
     digitalWrite(led_pin3, 1);
