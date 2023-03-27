@@ -10,11 +10,6 @@ class CarController:
         command = "f"
         self.ser.write(command + '\n')
         time.sleep(0.1)
-
-    def backward(self, speed):
-        command = "b"
-        self.ser.write(command + '\n')
-        time.sleep(0.1)
         
     def turn_left(self, speed):
         command = "l"
@@ -35,4 +30,4 @@ car = CarController()
 
 # car.forward()
 # car.stop()
-# car.backward()
+# car.turn_right()
