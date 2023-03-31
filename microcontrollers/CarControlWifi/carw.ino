@@ -53,12 +53,12 @@ void get_direction(String data) {
 }
 
 // Направление
-#define motor_left_direction 4
-#define motor_right_direction 7
+// #define motor_left_direction 4
+// #define motor_right_direction 7
 
-// Скорость
-#define motor_left_speed 5
-#define motor_right_speed 6
+// // Скорость
+// #define motor_left_speed 5
+// #define motor_right_speed 6
 
 void drive() {
   if (forward) {
